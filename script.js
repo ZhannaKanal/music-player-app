@@ -78,19 +78,5 @@ const allSongs = [
   },
 ];
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)
-const audio = new Audio();
-let userData = {
-  songs: [...allSongs],
-  currentSong: null,
-  songCurrentTime: 0,
-};
-const printGreeting = () => {
-  console.log("Hello there!");
-}
-printGreeting();
-const printMessage = (org) => {
-  console.log(`${org} is awesome!`);
-}
-printMessage("freeCodeCamp");
-const addTwoNumbers = (num1, num2) => num1 + num2;
-console.log(addTwoNumbers(3,4));
+//17
+const renderSongs = (array) => {};

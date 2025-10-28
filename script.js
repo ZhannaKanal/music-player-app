@@ -5,7 +5,6 @@ const nextButton = document.getElementById("next");
 const previousButton = document.getElementById("previous");
 const shuffleButton = document.getElementById("shuffle");
 
-
 const allSongs = [
   {
     id: 0,
@@ -78,8 +77,10 @@ const allSongs = [
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/chasing-that-feeling.mp3",
   },
 ];
-// 7-8
+// 7-8-9-10
 const audio = new Audio();
 let userData = {
-
+  songs: [...allSongs],
+  currentSong: null,
+  songCurrentTime: 0,
 };

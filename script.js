@@ -77,7 +77,7 @@ const allSongs = [
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/chasing-that-feeling.mp3",
   },
 ];
-// 7-8-9-10-11-12
+// 7-8-9-10-11-12-13
 const audio = new Audio();
 let userData = {
   songs: [...allSongs],
@@ -88,3 +88,7 @@ const printGreeting = () => {
   console.log("Hello there!");
 }
 printGreeting();
+const printMessage = (org) => {
+  console.log(`${org} is awesome!`);
+}
+printMessage("freeCodeCamp");

@@ -78,5 +78,9 @@ const allSongs = [
   },
 ];
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)
-//17
-const renderSongs = (array) => {};
+//17-18(.map()method)-19(callback function)
+const renderSongs = (array) => {
+  const songsHTML = array.map((song) => {
+    
+  });
+ };

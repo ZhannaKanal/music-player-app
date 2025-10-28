@@ -78,13 +78,14 @@ const allSongs = [
   },
 ];
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)
-//17-18(.map()method)-19(callback function)-20(return backticks)-21(button/span)
+//17-18(.map()method)-19(callback function)-20(return backticks)-21(button/span)-22(two more spans)
 const renderSongs = (array) => {
   const songsHTML = array.map((song) => {
     return `<li id = "song-${song.id}" class="playlist-song"></li>
             <button class="playlist-song-info">
-              <span class="playlist-song-title">${song.title}
-              </span>
+              <span class="playlist-song-title">${song.title}</span>
+              <span class="playlist-song-artist">${song.artist}</span>
+              <span class="playlist-song-duration">${song.duration}</span>
             </button>`;
   });
 };

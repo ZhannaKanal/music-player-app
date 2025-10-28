@@ -77,7 +77,7 @@ const allSongs = [
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/chasing-that-feeling.mp3",
   },
 ];
-// 7-8-9-10-11-12-13-14
+// 7-8-9-10-11-12-13-14-15(implicit return)
 const audio = new Audio();
 let userData = {
   songs: [...allSongs],
@@ -92,7 +92,5 @@ const printMessage = (org) => {
   console.log(`${org} is awesome!`);
 }
 printMessage("freeCodeCamp");
-const addTwoNumbers = (num1, num2) => {
-  return num1+num2;
-}
+const addTwoNumbers = (num1, num2) => num1 + num2;
 console.log(addTwoNumbers(3,4));

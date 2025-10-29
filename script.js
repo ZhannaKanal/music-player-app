@@ -77,6 +77,17 @@ const allSongs = [
     src: "https://cdn.freecodecamp.org/curriculum/js-music-player/chasing-that-feeling.mp3",
   },
 ];
+
+const audio = new Audio();
+let userData = {
+  songs: [...allSongs],
+  currentSong: null,
+  songCurrentTime: 0,
+};
+
+const playSong = (id) => {
+  const song = userData?.songs.find((song)=> song.id === id);
+};
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)
 //17-18(.map()method)-19(callback function)-20(return backticks)-21(button/span)-22(two more spans)-23(button/svg)-23(.join()method concat elemants of array)
 const renderSongs = (array) => {
@@ -96,7 +107,7 @@ const renderSongs = (array) => {
     .join("");
   playlistSongs.innerHTML = songsHTML;
 };
-renderSongs(userData?.songs);
+
 const sortSongs = () => {
   userData?.songs.sort((a, b) => {
     if (a.title < b.title) {
@@ -111,3 +122,4 @@ const sortSongs = () => {
   });
   return userData?.songs;
 };
+renderSongs(sortSongs());

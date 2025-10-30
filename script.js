@@ -96,7 +96,7 @@ const playSong = (id) => {
   }
   userData.currentSong = song;
   playButton.classList.add("playing");
-  
+
   audio.play();
 };
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)
@@ -118,6 +118,14 @@ const renderSongs = (array) => {
     .join("");
   playlistSongs.innerHTML = songsHTML;
 };
+
+playButton.addEventListener("click", () => {
+  if (userData?.currentSong === null) {
+    playSong(userData?.songs[0].id);
+  }else {
+    playSong(userData?.currentSong.id);
+  }
+});
 
 const sortSongs = () => {
   userData?.songs.sort((a, b) => {

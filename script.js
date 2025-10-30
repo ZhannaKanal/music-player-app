@@ -91,6 +91,8 @@ const playSong = (id) => {
   audio.title = song.title;
   if (!userData?.currentSong || userData?.currentSong.id !== song.id) {
     audio.currentTime = 0;
+  } else {
+    audio.currentTime = userData?.songCurrentTime;
   }
 };
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)

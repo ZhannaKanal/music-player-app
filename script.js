@@ -102,13 +102,12 @@ const playSong = (id) => {
 
 const pauseSong = () => {
   userData.songCurrentTime = audio.currentTime;
-  
+
   playButton.classList.remove("playing");
   audio.pause();
 };
 
 const playNextSong = () => {
-
   if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id);
   } else {
@@ -119,17 +118,20 @@ const playNextSong = () => {
   }
 };
 const playPreviousSong = () => {
-   if (userData?.currentSong === null) return;
-   else {
+  if (userData?.currentSong === null) return;
+  else {
     const currentSongIndex = getCurrentSongIndex();
     const previousSong = userData?.songs[currentSongIndex - 1];
 
     playSong(previousSong.id);
-   }
+  }
 };
 
 const highlightCurrentSong = () => {
   const playlistSongElements = document.querySelectorAll(".playlist-song");
+  const songToHighlight = document.getElementById(
+    `song-${userData?.currentSong?.id}`
+  );
 };
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)
 //17-18(.map()method)-19(callback function)-20(return backticks)-21(button/span)-22(two more spans)-23(button/svg)-23(.join()method concat elemants of array)
@@ -151,12 +153,13 @@ const renderSongs = (array) => {
   playlistSongs.innerHTML = songsHTML;
 };
 
-const getCurrentSongIndex = () => userData?.songs.indexOf(userData?.currentSong);
+const getCurrentSongIndex = () =>
+  userData?.songs.indexOf(userData?.currentSong);
 
 playButton.addEventListener("click", () => {
   if (userData?.currentSong === null) {
     playSong(userData?.songs[0].id);
-  }else {
+  } else {
     playSong(userData?.currentSong.id);
   }
 });

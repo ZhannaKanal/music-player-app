@@ -132,9 +132,10 @@ const highlightCurrentSong = () => {
   const songToHighlight = document.getElementById(
     `song-${userData?.currentSong?.id}`
   );
-  playlistSongElements.forEach((songEl)=>{});
+  playlistSongElements.forEach((songEl) => {
+    songEl.removeAttribute("aria-current");
+  });
 };
-
 
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)
 //17-18(.map()method)-19(callback function)-20(return backticks)-21(button/span)-22(two more spans)-23(button/svg)-23(.join()method concat elemants of array)

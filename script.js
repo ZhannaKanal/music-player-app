@@ -135,6 +135,9 @@ const highlightCurrentSong = () => {
   playlistSongElements.forEach((songEl) => {
     songEl.removeAttribute("aria-current");
   });
+  if (songToHighlight) {
+    songToHighlight.setAttribute("aria-current", "true");
+  }
 };
 
 // 7-8-9-10-11-12-13-14-15(implicit return)-16(removing all functions and calls)

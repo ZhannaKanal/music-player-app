@@ -142,7 +142,18 @@ const shuffle = () => {
 };
 
 const deleteSong = (id) => {
-  userData.songs = userData?.songs.filter(song=> song.id!==id);
+  if (userData?.currentSong?.id === id) {
+    userData.currentSong = null;
+    userData.songCurrentTime = 0;
+
+    pauseSong();
+    setPlayerDisplay();
+  }
+
+  userData.songs = userData?.songs.filter((song) => song.id !== id);
+  renderSongs(userData?.songs);
+  highlightCurrentSong();
+  setPlayButtonAccessibleText();
 };
 
 const setPlayerDisplay = () => {
